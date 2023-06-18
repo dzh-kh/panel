@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/app-views/pages/home/index.js"],"names":["Home","_jsx","_Fragment","children"],"mappings":"qHAIeA,UAJF,WACX,OAAOC,cAAAC,WAAA,CAAAC,SAAE,QACX,C","file":"static/js/16.03faa774.chunk.js","sourcesContent":["const Home = () => {\r\n  return <>Home</>;\r\n};\r\n\r\nexport default Home;\r\n"],"sourceRoot":""}
