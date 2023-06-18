@@ -17,7 +17,7 @@ const PUBLIC_REQUEST_KEY = "public-request";
 // API Request interceptor
 service.interceptors.request.use(
   (config) => {
-    const jwtToken = JSON.parse(localStorage.getItem("user")).apiTokenInstance;
+    const jwtToken = "123";
     if (jwtToken) {
       config.headers[TOKEN_PAYLOAD_KEY] = jwtToken;
     }
@@ -47,7 +47,6 @@ service.interceptors.response.use(
     let notificationParam = {
       message: "",
     };
-
     // Remove token and redirect
     if (error.response.status === 400 || error.response.status === 403) {
       notificationParam.message = "Authentication Fail";

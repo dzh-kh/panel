@@ -3,10 +3,7 @@ import fetch from "auth/FetchInterceptor";
 const userService = {};
 
 userService.getUserById = function (id) {
-  return fetch.get(
-    `/users/${id}`
-    // method: "get",
-  );
+  return fetch.get(`/users/${id}`);
 };
 
 userService.getUsers = function () {

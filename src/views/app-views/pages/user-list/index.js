@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { APP_PREFIX_PATH } from "configs/AppConfig";
 import Loading from "components/shared-components/Loading";
+
 const UserList = () => {
   const [usersList, setUserList] = useState([]);
   const { users, isLoading } = useSelector((state) => state.user);

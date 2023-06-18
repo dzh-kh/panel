@@ -62,7 +62,10 @@ p {
 
 .controller-group button {
   padding: 5px 10px;
-  /* width: 100%; */
+}
+
+.file-input {
+  display: flex;
 }
 
 .file-input__input {
