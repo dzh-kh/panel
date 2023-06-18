@@ -10,7 +10,6 @@ userService.getUserById = function (id) {
 };
 
 userService.getUsers = function () {
-  console.log("start");
   return fetch.get("/users");
 };
 

@@ -22,7 +22,6 @@ export function* fetchUser(action) {
 export function* fetchUsers() {
   try {
     const data = yield call(userService.getUsers);
-    console.log(data);
     yield delay(500);
     yield put(fetchUsersSuccess(data));
   } catch (e) {

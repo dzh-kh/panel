@@ -7,7 +7,6 @@ import "antd/dist/antd.css";
 const Planner = () => {
   const [selectedShape, setSelectedShape] = useState();
   useEffect(() => {
-    window.addEventListener("click", () => {});
     const width = 990;
     const height = 480;
 
@@ -57,17 +56,6 @@ const Planner = () => {
       enabledAnchors: ["bottom-right"],
     });
     layer.add(tr);
-
-    tr.on("dragmove", function (e) {
-      const x = tr.attrs.x;
-      const y = tr.attrs.y;
-      const maxBottom = stage.attrs.height - tr.attrs.height;
-      const maxRight = stage.attrs.width - tr.attrs.width;
-      if (maxBottom - y < 0) tr.attrs.y = maxBottom;
-      if (maxRight - x < 0) tr.attrs.x = maxRight;
-      if (x < 0) tr.attrs.x = 0;
-      if (y < 0) tr.attrs.y = 0;
-    });
 
     tr.on("dragend", () => {
       setSelectedShape("");
