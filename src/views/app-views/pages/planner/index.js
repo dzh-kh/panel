@@ -10,7 +10,7 @@ const Planner = () => {
     const width = 990;
     const height = 480;
 
-    var stage = new Konva.Stage({
+    const stage = new Konva.Stage({
       container: "container",
       width,
       height,
@@ -18,9 +18,9 @@ const Planner = () => {
 
     stage.getContainer().style.backgroundColor = "#242424";
 
-    var layer = new Konva.Layer();
+    const layer = new Konva.Layer();
 
-    var gridLayer = new Konva.Layer();
+    const gridLayer = new Konva.Layer();
 
     function drawGrid(startX, startY, endX, endY, gridCellSize) {
       for (let y = startY; y <= endY; y += gridCellSize) {
@@ -129,7 +129,7 @@ const Planner = () => {
         shiftY = e.pageY - coords.top;
       });
 
-    var con = stage.container();
+    const con = stage.container();
     con.addEventListener("dragover", function (e) {
       e.preventDefault();
     });
@@ -150,10 +150,10 @@ const Planner = () => {
 
     const addImage = (config) => {
       const { x, y, width, height, src, name, ...rest } = config;
-      var imageObj = new Image();
+      const imageObj = new Image();
       imageObj.src = src;
       imageObj.onload = function () {
-        var image = new Konva.Image({
+        const image = new Konva.Image({
           x,
           y,
           image: imageObj,
